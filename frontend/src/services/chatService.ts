@@ -11,6 +11,7 @@ export async function saveChat(messages:any) {
 
 export async function getAllChats() {
   const response = await fetch(`${API_BASE}/chats`);
+  console.log("all chats response", response);
   return response.json();
 }
 //////////////////////////////////////////////////////

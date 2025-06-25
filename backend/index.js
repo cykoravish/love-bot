@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://love-bot-1-fd6w.onrender.com", // or your deployed frontend URL
+    origin: ["https://love-bot-1-fd6w.onrender.com", "http://localhost:5173"], // or your deployed frontend URL
     credentials: true,               // if you're sending cookies/session
   })
 );
