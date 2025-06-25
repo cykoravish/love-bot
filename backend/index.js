@@ -8,7 +8,14 @@ import meetingRoutes from "./routes/meetingRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://love-bot-1-fd6w.onrender.com", // or your deployed frontend URL
+    credentials: true,               // if you're sending cookies/session
+  })
+);
 app.use(express.json());
 
 mongoose

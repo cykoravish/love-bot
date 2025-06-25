@@ -1,18 +1,18 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useEffect, useState } from "react";
 import { getAllChats } from "../services/chatService";
-import { getMeetings } from "../services/chatService";
+// import { getMeetings } from "../services/chatService";
 
 export default function Dashboard() {
   const [chats, setChats] = useState([]);
-  const [meetings, setMeetings] = useState([]);
+  // const [meetings, setMeetings] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const chatData = await getAllChats();
-      const meetingData = await getMeetings();
+      // const meetingData = await getMeetings();
       setChats(chatData);
-      setMeetings(meetingData);
+      // setMeetings(meetingData);
     };
     fetchData();
   }, []);
